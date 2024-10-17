@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Admin Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 sidebar">
+<!--      <h2 class="college-name">P.E.S. Modern College of Engineering</h2>-->
+      <img id="logo" src="mcoe.jpg">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#students"><i class="fas fa-user-graduate"></i> Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#faculty"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#courses"><i class="fas fa-book"></i> Courses</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-10 content">
+      <div id="dashboard" class="tab-content active">
+        <div class="row dashboard">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-user-graduate"></i> Total Students</h5>
+                <p class="card-text">1500</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-chalkboard-teacher"></i> Total Faculty</h5>
+                <p class="card-text">100</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-book"></i> Total Courses</h5>
+                <p class="card-text">50</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-graduation-cap"></i> Graduation Rate</h5>
+                <p class="card-text">85%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Student Enrollment Trend</h5>
+                <canvas id="enrollmentChart" height="400"></canvas>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Course Popularity</h5>
+                <canvas id="popularityChart" height="400"></canvas>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="students" class="tab-content">
+        <h2>Student Information</h2>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Department</th>
+            <th>Year</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Faizal Mistry</td>
+            <td>33544</td>
+            <td>AIML</td>
+            <td>2023</td>
+          </tr>
+          <tr>
+            <td>Suyash Pawale</td>
+            <td>33567</td>
+            <td>CS</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Akshat More</td>
+            <td>33545</td>
+            <td>IT</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+            <td>Sarthak Zunjurke</td>
+            <td>33570</td>
+            <td>IT</td>
+            <td>2024</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="faculty" class="tab-content">
+        <h2>Faculty Information</h2>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Designation</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>DR. C. A. GHUGE</td>
+            <td>Computer Science</td>
+            <td>Associate Professor</td>
+          </tr>
+          <tr>
+            <td>Ms. Gauri Mathad</td>
+            <td>IT</td>
+            <td>Assistant Professor</td>
+          </tr>
+          <tr>
+            <td>Mrs. Sapana Bhirud</td>
+            <td>AIML</td>
+            <td>Assistant Professor</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="courses" class="tab-content">
+        <h2>Course Information</h2>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Credits</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>CS101</td>
+            <td>Introduction to Computer Science</td>
+            <td>Computer Science</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>ME201</td>
+            <td>Thermodynamics</td>
+            <td>Mechanical</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>CE301</td>
+            <td>Structural Analysis</td>
+            <td>Civil</td>
+            <td>4</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
